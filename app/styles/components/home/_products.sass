@@ -1,0 +1,20 @@
+.ubimed-products
+  &__title
+    color: gray
+
+    font-weight: 800
+
+  &__itemImgContainer
+    margin: 0
+    
+    text-align: center
+  
+  &__img
+    width: 100%
+    object-fit: cover
+
+  &__itemTitle
+    text-align: center
+
+    @include respondTo($minWidth, 1024px)
+      text-align: left
