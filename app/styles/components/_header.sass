@@ -1,0 +1,16 @@
+.ubimed-header
+  &__link
+    font-weight: 600
+
+    @include respondTo($minWidth, 992px)
+      color: black !important
+      
+      font-weight: 500
+
+      transition: color .3s, padding-bottom .3s
+
+      &:hover
+        padding-bottom: 2px
+        
+        color: $colorPrimary !important
+        

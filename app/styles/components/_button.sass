@@ -1,0 +1,30 @@
+.button
+  height: auto !important
+  padding: 10px 20px !important
+
+  font-size: 16px !important
+  font-family: $familyPrimary !important
+  line-height: normal
+
+  &.is-primary
+    border: 1px solid $btnPrimaryColor
+    border-radius: 3px
+    
+    background-color: $btnPrimaryColor
+    color: white
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2)
+
+    &:hover
+      background-color: $btnPrimaryColor
+      text-decoration: none
+
+  &.is-outlined
+    border: solid 1px $btnPrimaryColor !important
+    border-radius: 3px
+    color: $btnPrimaryColor
+
+    &:hover
+      background-color: transparent !important
+      color: $btnPrimaryColor
+
+      text-decoration: none
