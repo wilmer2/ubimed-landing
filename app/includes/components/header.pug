@@ -1,28 +1,28 @@
 header
-  nav.ubimed-header__navbar.navbar.navbar-expand-lg.navbar-light.bg-white.container
+  nav.ubimed-header__navbar.navbar.navbar-expand-lg.navbar-light.bg-white
     a.ubimed-header__logoContainer.navbar-brand(href='#')
       img.ubimed-header__logo(src='./images/logo-ubimed-1.png' alt='Ubimed Logo')
     button.navbar-toggler.ubimed-header__hamburgerBtn(data-toggle='collapse' data-target='#navbarText' aria-controls='navbarText' aria-expanded='false' aria-label='Toggle navigation' type='button')
       i.navbar-toggler-icon
     #navbarText.collapse.navbar-collapse
       ul.navbar-nav.mr-auto
-        li.nav-item
+        li.nav-item.ubimed-header__linkContainer
           a.nav-link.ubimed-header__link(href='#')
             | Inicio
-        li.nav-item
+        li.nav-item.ubimed-header__linkContainer
           a.nav-link.ubimed-header__link(href='#')
             | Acerca de
-        li.nav-item
+        li.nav-item.ubimed-header__linkContainer
           a.nav-link.ubimed-header__link(href='#')
             | Contacto
-        li.nav-item
+        li.nav-item.ubimed-header__linkContainer
           a.nav-link.ubimed-header__link(href='#')
             | Productos
-        li.nav-item
+        li.nav-item.ubimed-header__linkContainer
           a.nav-link.ubimed-header__link(href='#')
             | Soporte
         li.nav-item.d-lg-none.mt-2.mt-md-3.mb-3
-          a.button.is-primary(href='#')
+          a.nav-link.ubimed-header__link.ubimed-header__linkAccount(href='#')
             | Ingresar
       a.button.is-outlined.d-none.d-lg-block.mr-3(href='#')
         | Ingresar

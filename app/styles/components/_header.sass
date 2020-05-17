@@ -1,6 +1,17 @@
 .ubimed-header
+  &__linkAccount
+    color: $colorPrimary !important
+  &__logo
+    width: 140px
+
+    @include respondTo($minWidth, 1215px)
+      width: 160px
+
+  &__hamburgerBtn
+    border: none
+
   &__link
-    font-weight: 600
+    font-weight: 500
 
     @include respondTo($minWidth, 992px)
       transition: color .3s, padding-bottom .3s
