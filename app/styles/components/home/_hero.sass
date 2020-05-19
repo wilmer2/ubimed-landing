@@ -7,7 +7,9 @@
     background-color: rgba(black, 0.5)
     color: white
 
-    text-align: center
+    @include respondTo($minWidth, 500px)
+      text-align: center
+
 
     @include respondTo($minWidth, 800px)
       padding-top: 90px
@@ -39,46 +41,40 @@
     font-weight: bold
     text-shadow: 0.5px 1px white
 
-    @include respondTo($minWidth, 568px)
-      font-size: 28px
-      line-height: 1.5 !important
+    @include respondTo($minWidth, 500px)
+      font-size: 30px
 
-    @include respondTo($minWidth, 800px)
+    @include respondTo($minWidth, 1024px)
       margin-bottom: 15px
-      font-size: 32px
+
+    @include respondTo($minWidth, 1215px)
+      font-size: 33px
 
   &__message
-    max-width: 360px
-    margin: 0 auto
-    padding-bottom: 25px
+    padding-bottom: 5px
+    max-width: 380px
     
     text-shadow: 0 0 1px rgba(0,0,0,.6)
-
-    font-size: 16px
+    font-size: 14px
     line-height: 1.5 !important
+    
 
-    @incluce respondTo($minWidth, 400px)
-      max-width: 400px
+    @include respondTo($minWidth, 400px)
+      font-size: 18px
 
-    @include respondTo($minWidth, 568px)
+    @include respondTo($minWidth, 500px)
       max-width: 600px
+      margin: 0 auto
+      padding-bottom: 20px
+
+    @include respondTo($minWidth, 1215px)
+      max-width: 600px
+      padding-bottom: 25px
   
   &__slogan
-    max-width: 360px
-    margin: auto
-
     font-weight: 500
     font-size: 16px
 
-    @include respondTo($minWidth, 400px)
-      max-width: 400px
-      
+    @include respondTo($minWidth, 500px)
       font-size: 18px
-      
-    @include respondTo($minWidth, 568px)
-      max-width: 600px
 
-    @include respondTo($minWidth, 1024px)
-      padding-bottom: 0 !important
-    
-      font-size: 24px
