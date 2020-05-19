@@ -1,5 +1,24 @@
 header
-  nav.ubimed-header__navbar.navbar.navbar-expand-lg.navbar-light.bg-white
+  nav.ubimed-toolbar
+    .ubimed-toolbar__container.d-flex.justify-content-end.justify-content-md-between
+      .ubimed-toolbar__contactContainer.d-none.d-md-flex
+        a.ubimed-toolbar__link(href='tel:+573134965171')
+          i.ubm-icon-phone-24px.ubimed-toolbar__icon.ubimed-toolbar__phoneIcon
+          span.ubimed-toolbar__text
+            | +57 3134965171
+        a.ubimed-toolbar__link.ubimed-toolbar__link--mail(href='mailto:Sandraaguilera@ubimed.com.co')
+          i.ubm-icon-mail_outline-24px-1.ubimed-toolbar__icon.ubimed-toolbar__mailIcon
+          span.ubimed-toolbar__text
+            | sandraaguilera@ubimed.com.co
+      .ubimed-toolbar__socialMediaContainer.d-flex.align-items-center
+        a(href='#').ubimed-toolbar__socialMediaLink
+          img.ubimed-toolbar__socialMediaImg(src='./images/facebook.png', alt='Ubimed Logo Facebook')
+        a(href='#').ubimed-toolbar__socialMediaLink
+          img.ubimed-toolbar__socialMediaImg(src='./images/instagram.png', alt='Ubimed Logo Instagram')
+        a(href='https://wa.me/+573134965171').ubimed-toolbar__socialMediaLink
+          img.ubimed-toolbar__socialMediaImg(src='./images/whatsapp.png', alt='Ubimed Logo WhatsApp')
+
+  nav.ubimed-header__navbar.navbar.navbar-expand-lg.navbar-light.bg-white.ubimed__container
     a.ubimed-header__logoContainer.navbar-brand(href='#')
       img.ubimed-header__logo(src='./images/logo-ubimed-1.png' alt='Ubimed Logo')
     button.navbar-toggler.ubimed-header__hamburgerBtn(data-toggle='collapse' data-target='#navbarText' aria-controls='navbarText' aria-expanded='false' aria-label='Toggle navigation' type='button')
@@ -11,16 +30,10 @@ header
             | Inicio
         li.nav-item.ubimed-header__linkContainer
           a.nav-link.ubimed-header__link(href='#')
-            | Acerca de
+            | Servicios
         li.nav-item.ubimed-header__linkContainer
           a.nav-link.ubimed-header__link(href='#')
             | Contacto
-        li.nav-item.ubimed-header__linkContainer
-          a.nav-link.ubimed-header__link(href='#')
-            | Productos
-        li.nav-item.ubimed-header__linkContainer
-          a.nav-link.ubimed-header__link(href='#')
-            | Soporte
         li.nav-item.d-lg-none.mt-2.mt-md-3.mb-3
           a.nav-link.ubimed-header__link.ubimed-header__linkAccount(href='#')
             | Ingresar

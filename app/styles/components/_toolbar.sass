@@ -1,0 +1,52 @@
+.ubimed-toolbar
+  background-color: $colorPrimary
+  
+  &__container
+    height: 45px
+    padding-left: 16px
+    padding-right: 16px
+    max-width: 1408px
+    margin: 0 auto
+    
+
+  &__link, &__link:hover
+    display: flex
+    align-items: center
+
+    padding: 4px 0
+    
+    color: white
+
+    font-size: 16px
+    font-family: $familyPrimary !important
+    text-decoration: none
+
+  &__link--mail
+    margin-left: 15px
+
+    @include respondTo($minWidth, 1024px)
+      margin-left: 25px
+
+    @include respondTo($minWidth, 1215px)
+      margin-left: 30px
+
+  &__icon
+    font-size: 20px
+
+  &__phoneIcon
+    padding-right: 8px
+  
+  &__mailIcon
+    padding-top: 3px
+    padding-right: 7px
+
+  &__socialMediaLink
+    padding-left: 5px
+    padding-right: 5px
+
+  &__socialMediaImg
+    width: 20px
+
+    @include respondTo($minWidth, 1024px)
+      width: 18px
+
