@@ -1,0 +1,48 @@
+.ubimed-service
+  &__container
+    margin: 30px 0
+
+    @include respondTo($minWidth, 768px)
+      display: flex
+      justify-content: space-between
+      height: 151px
+
+      background: white
+      box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2)
+      border-radius: 10px
+    @include respondTo($minWidth, 1024px)
+      margin-top: 50px
+      width: 700px
+    
+  &__textContainer
+    padding-top: 16px
+    padding-left: 16px
+  &__title
+    color: $colorPrimary
+
+    font-size: 20px
+    font-family: $familyPrimary
+
+    @include respondTo($minWidth, 360px)
+      font-size: 22px
+
+    @include respondTo($minWidth, 1024px)
+      font-size: 26px
+  
+  &__description
+    padding: 5px 0
+    color: rgba(0, 0, 0, .5)
+
+    font-family: $familyPrimary
+    font-size: 14px
+
+  &__img
+    width: 226px
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2)
+
+    border-top-right-radius: 10px
+    border-bottom-right-radius: 10px
+
+    object-fit: contain
+
+    
