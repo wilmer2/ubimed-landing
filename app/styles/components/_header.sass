@@ -1,53 +1,50 @@
 .ubimed-header
-  &__toolbar
-    background: $colorPrimary
+  &__navbar
+    padding-left: 16px !important
+    padding-right: 16px !important
 
-  &__toolbarContainer
-    display: flex
-    align-items: center
-    justify-content: flex-end
-    min-height: 40px
-    padding-right: 16px
-    padding-left: 16px
-
-    color: white
-
-    @include respondTo($minWidth, 768px)
-      padding-left: 24px
-      padding-right: 24px
-
-  &__toolbarIconContainer
-    display: flex
-    
-
-  &__toolbarImgContainer
-    padding-left: 5px
-    padding-right: 5px
-
-  &__toolbarImg
-    width: 20px
-  
   &__linkAccount
     color: $colorPrimary !important
 
   &__logo
     width: 140px
 
-    @include respondTo($minWidth, 1215px)
+    @include respondTo($minWidth, 768px)
       width: 160px
+
+    @include respondTo($minWidth, 1024px)
+      width: 180px
 
   &__hamburgerBtn
     border: none
 
   &__link
-    color: #191b26
-
-    
+    color: rgba(0, 0, 0, 0.5) !important
+  
     @include respondTo($minWidth, 992px)
       transition: color .3s, padding-bottom .3s
 
-      &:hover
-        padding-bottom: 2px
-        
+      &:hover 
         color: $colorPrimary !important
+
+        .ubimed-header__linkDot
+          background-color: $colorPrimary
+  
+  &__linkIcon
+    font-size: 20px
+
+  &__linkDotContainer
+    height: 27px
+
+  &__linkDot
+    width: 7px
+    height: 7px
+    margin: 0 1.3px
+
+    border-radius: 50%
+    background-color: rgba(0, 0, 0, 0.4)
+
         
+.dropdown
+  &:hover .dropdown-menu
+    display: block

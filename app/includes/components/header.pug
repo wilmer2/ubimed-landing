@@ -6,10 +6,10 @@ header
           i.ubm-icon-phone-24px.ubimed-toolbar__icon.ubimed-toolbar__phoneIcon
           span.ubimed-toolbar__text
             | +57 3134965171
-        a.ubimed-toolbar__link.ubimed-toolbar__link--mail(href='mailto:Sandraaguilera@ubimed.com.co')
+        a.ubimed-toolbar__link.ubimed-toolbar__link--mail(href='mailto:contacto@ubimed.com.co')
           i.ubm-icon-mail_outline-24px-1.ubimed-toolbar__icon.ubimed-toolbar__mailIcon
           span.ubimed-toolbar__text
-            | sandraaguilera@ubimed.com.co
+            | contacto@ubimed.com.co
       .ubimed-toolbar__socialMediaContainer.d-flex.align-items-center
         a(href='#').ubimed-toolbar__socialMediaLink
           img.ubimed-toolbar__socialMediaImg(src='./images/facebook.png', alt='Ubimed Logo Facebook')
@@ -18,7 +18,7 @@ header
         a(href='https://wa.me/+573134965171').ubimed-toolbar__socialMediaLink
           img.ubimed-toolbar__socialMediaImg(src='./images/whatsapp.png', alt='Ubimed Logo WhatsApp')
 
-  nav.ubimed-header__navbar.navbar.navbar-expand-lg.navbar-light.bg-white.ubimed__container
+  nav.ubimed-header__navbar.navbar.navbar-expand-lg.navbar-light.bg-white
     a.ubimed-header__logoContainer.navbar-brand(href='#')
       img.ubimed-header__logo(src='./images/logo-ubimed-1.png' alt='Ubimed Logo')
     button.navbar-toggler.ubimed-header__hamburgerBtn(data-toggle='collapse' data-target='#navbarText' aria-controls='navbarText' aria-expanded='false' aria-label='Toggle navigation' type='button')
@@ -28,16 +28,34 @@ header
         li.nav-item.ubimed-header__linkContainer
           a.nav-link.ubimed-header__link(href='#')
             | Inicio
-        li.nav-item.ubimed-header__linkContainer
-          a.nav-link.ubimed-header__link(href='#')
+        li.nav-item.ubimed-header__linkContainer.dropdown
+          a.nav-link.ubimed-header__link(href='#' id='serviceDropDown' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
             | Servicios
+          .dropdown-menu(aria-labelledby='serviceDropDown')
+            a.dropdown-item(href='#')
+              | Pacientes
+            a.dropdown-item(href='#')
+              | Profesionales de la salud
         li.nav-item.ubimed-header__linkContainer
           a.nav-link.ubimed-header__link(href='#')
             | Contacto
+        
+        li.nav-item.ubimed-header__linkContainer.dropdown
+          a.nav-link.ubimed-header__link(href='#' id='dotDropDown' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+            .ubimed-header__linkDotContainer.d-flex.align-items-center
+              .ubimed-header__linkDot
+              .ubimed-header__linkDot
+              .ubimed-header__linkDot
+          .dropdown-menu(aria-labelledby='dotDropDown')
+            a.dropdown-item(href='#')
+              | Soporte
+            a.dropdown-item(href='#')
+              | PQR
+
         li.nav-item.d-lg-none.mt-2.mt-md-3.mb-3
-          a.nav-link.ubimed-header__link.ubimed-header__linkAccount(href='#')
+          a.button.is-primary.is-circle.mt-1(href='#')
             | Ingresar
-      a.button.is-outlined.d-none.d-lg-block.mr-3(href='#')
+      a.button.is-outlined.is-circle.d-none.d-lg-block.mr-3(href='#')
         | Ingresar
         
         
