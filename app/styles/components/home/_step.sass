@@ -1,0 +1,69 @@
+.ubimed-step
+  &__title
+    margin-top: 30px
+    margin-bottom: 25px
+
+    color: $letterColor
+
+    font-size: 18px
+    font-weight: bold
+
+    @include respondTo($minWidth, 1024px)
+      margin-top: 40px
+
+      font-size: 20px
+
+  &__container
+    @include respondTo($minWidth, 1024px)
+      display: flex
+      justify-content: space-between
+  
+  &__item
+    display: flex
+    margin-bottom: 31px
+
+    @include respondTo($minWidth, 1024px)
+      display: block
+
+
+  &__body
+    max-width: 255px
+    
+  &__imgContainer
+    margin-right: 16px
+    flex-shrink: 0
+
+    @include respondTo($minWidth, 1024px)
+      text-align: center
+
+  &__img
+    height: 70px
+    width: 70px
+    border-radius: 50%
+
+    @include respondTo($minWidth, 360px)
+      height: 75px
+      width: 75px
+
+    @include respondTo($minWidth, 1024px)
+      height: 110px
+      width: 110px
+
+  &__itemTitle
+    color: $letterColor
+
+    font-weight: 600
+    font-size: 16px
+    
+    @include respondTo($minWidth, 1024px)
+      margin-bottom: 10px
+    
+      font-size: 18px
+
+  &__description
+    color: $letterColor
+    
+    font-size: 14px
+    line-height: 1.5
+
+

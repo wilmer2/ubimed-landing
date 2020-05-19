@@ -1,0 +1,94 @@
+.ubimed-telemedicine
+  &__container
+    margin-top: 15px
+    
+    background: white
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2)
+    border-radius: 12px
+
+    @include respondTo($minWidth, 600px)
+      display: flex
+    
+    @include respondTo($minWidth, 800px)
+      justify-content: space-between
+
+    @include respondTo($minWidth, 1215px)
+      box-shadow: none
+    
+  &__textContainer
+    padding: 14px 14px 0 14px
+
+    @include respondTo($minWidth, 360px)
+      padding: 16px 16px 8px 16px
+    
+    @include respondTo($minWidth, 1000px)
+      padding: 20px
+    
+    @include respondTo($minWidth, 1215px)
+      padding-left: 0
+      padding-right: 0
+
+  &__textTitle
+    color: $colorPrimary
+
+    font-size: 20px
+    font-family: $familyPrimary
+
+    @include respondTo($minWidth, 360px)
+      font-size: 22px
+
+    @include respondTo($minWidth, 1024px)
+      font-size: 26px
+  
+  &__text
+    color: rgba(0, 0, 0, .5)
+
+    font-size: 14px
+
+    @include respondTo($minWidth, 360px)
+      font-size: 16px
+    
+    @include respondTo($minWidth, 600px)
+      max-width: 600px
+    
+    @include respondTo($minWidth, 900px)
+      font-size: 18px
+
+  &__imgContainer
+    margin: 0
+    padding: 0
+
+    width: auto
+
+  &__img
+    max-height: 180px
+    width: 100%
+    border-bottom-left-radius: 15px
+    border-bottom-right-radius: 15px
+
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2)
+
+    object-fit: cover
+    
+    @include respondTo($minWidth, 360px)
+      max-height: 210px
+
+      box-shadow: none
+
+    @include respondTo($minWidth, 400px)
+      max-height: 230px
+
+    @include respondTo($minWidth, 600px)
+      max-height: none
+      width: 200px
+      height: 210px
+
+    @include respondTo($minWidth, 1215px)
+      height: 400px
+      width: 500px
+
+      border-radius: 10px
+
+
+
+    
