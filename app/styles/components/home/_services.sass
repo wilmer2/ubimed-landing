@@ -10,13 +10,24 @@
       background: white
       box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2)
       border-radius: 10px
+
     @include respondTo($minWidth, 1024px)
       margin-top: 50px
       width: 700px
+
+    &--medical
+      flex-direction: row-reverse
+      height: 188px
     
   &__textContainer
     padding-top: 16px
     padding-left: 16px
+
+    &--medical
+      padding-top: 8px
+      padding-left: 18px
+      padding-bottom: 16px
+
   &__title
     color: $colorPrimary
 
@@ -36,6 +47,9 @@
     font-family: $familyPrimary
     font-size: 14px
 
+    &--medical
+      padding: 0
+
   &__img
     width: 226px
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2)
@@ -45,4 +59,9 @@
 
     object-fit: contain
 
-    
+    &--medical
+      width: 200px
+      border-top-right-radius: 0
+      border-bottom-right-radius: 0
+      border-top-left-radius: 10px
+      border-bottom-left-radius: 10px

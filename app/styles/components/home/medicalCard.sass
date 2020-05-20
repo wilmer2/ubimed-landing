@@ -1,0 +1,60 @@
+.ubimed-medical
+  &__container
+    margin-top: 30px
+    padding: 14px
+    
+    background: white
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2)
+    border-radius: 12px
+
+    @include respondTo($minWidth, 768px)
+      display: flex
+      justify-content: space-between
+      padding: 0
+
+  &__textContainer
+    @include respondTo($minWidth, 768px)
+      padding: 16px
+    
+    @include respondTo($minWidth, 1024px)
+      padding: 20px 0 0 20px
+
+  &__title
+    color: $colorPrimary
+
+    font-size: 20px
+
+    @include respondTo($minWidth, 1024px)
+      font-size: 26px
+
+  &__description
+    color: $letterColor
+
+    font-size: 16px
+
+    @include respondTo($minWidth, 768px)
+      max-width: 400px
+    
+    @include respondTo($minWidth, 1024px)
+      max-width: 600px
+      margin-bottom: 30px
+
+      font-size: 18px
+
+  
+  &__imgContainer
+    margin: 0
+    padding: 0
+    width: 250px
+
+    @include respondTo($minWidth, 1024px)
+      
+
+  &__img
+    width: 100%
+    height: 100%
+    border-top-right-radius: 12px
+    border-bottom-right-radius: 12px
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2)
+
+    
