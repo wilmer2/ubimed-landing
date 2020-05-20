@@ -17,9 +17,13 @@
 
     @include respondTo($minWidth, 1024px)
       padding-left: 0
-      padding-right: 0
-      margin-right: 10px
+      
       max-width: 600px
+
+    @include respondTo($minWidth, 1215px)
+      max-width: 700px
+      padding-right: 0
+      margin-right: 0
 
   &__textTitle
     margin: 0
@@ -40,9 +44,15 @@
 
     @include respondTo($minWidth, 360px)
       font-size: 16px
+
+    @include respondTo($minWidth, 768px)
+      text-align: justify    
     
     @include respondTo($minWidth, 900px)
       font-size: 18px
+
+    @include respondTo($minWidth, 1024px)
+      margin-bottom: 5px
 
   &__extraText
     padding-top: 10px
@@ -51,12 +61,28 @@
     color: $letterColor
     
     font-size: 14px
+
+    @include respondTo($minWidth, 768px)
+      text-align: justify
     
     @include respondTo($minWidth, 360px)
       font-size: 16px
 
     @include respondTo($minWidth, 900px)
       font-size: 18px
+
+    @include respondTo($minWidth, 1024px)
+      display: none
+
+  &__link, &__link:hover
+    //display: none
+
+    color: $colorPrimary
+
+    cursor: pointer
+
+    @include respondTo($minWidth, 1024px)
+      display: block
     
   &__imgContainer
     margin: 0
@@ -66,7 +92,10 @@
 
     @include respondTo($minWidth, 1024px)
       margin-top: 50px
-      width: 550px
+      width: 400px
+
+    @include respondTo($minWidth, 1215px)
+      width: 550px    
 
   &__img
     width: 100%
