@@ -7,7 +7,7 @@
     background-color: rgba(black, 0.5)
     color: white
 
-    @include respondTo($minWidth, 500px)
+    @include respondTo($minWidth, 400px)
       text-align: center
 
 
@@ -55,27 +55,32 @@
     max-width: 380px
     
     text-shadow: 0 0 1px rgba(0,0,0,.6)
-    font-size: 14px
+    font-size: 16px
     line-height: 1.5 !important
 
     @include respondTo($minWidth, 360px)
-      font-size: 16px
+      max-width: 600px
 
-    @include respondTo($minWidth, 400px)
       font-size: 18px
 
     @include respondTo($minWidth, 500px)
-      max-width: 600px
       margin: 0 auto
       padding-bottom: 20px
 
+    @include respondTo($minWidth, 650px)
+      padding-left: 20px
+      padding-right: 20px
+      max-width: 700px
+
     @include respondTo($minWidth, 1215px)
-      max-width: 600px
       padding-bottom: 25px
   
   &__slogan
     font-weight: 500
-    font-size: 16px
+    font-size: 14px
+
+    @include respondTo($minWidth, 360px)
+      font-size: 16px
 
     @include respondTo($minWidth, 500px)
       font-size: 18px
