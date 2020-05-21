@@ -6,6 +6,11 @@
   &__container
     padding: 20px 16px 0 16px
 
+    @include respondTo($minWidth, 768px)
+      padding-left: 0
+      padding-right: 0
+
+    
   &__icon
     margin-right: 12px
     color: white
@@ -19,6 +24,9 @@
   &__logoContainer
     width: 180px
     margin: 0 auto 15px
+
+    @include respondTo($minWidth, 1024px)
+       margin: 15px 0 8px 0
 
   &__logoImg
     width: 100%
@@ -54,6 +62,12 @@
     
     font-size: 11px
     text-align: center
+
+    @include respondTo($minWidth, 1024px)
+      padding-top: 20px
+      padding-bottom: 12px
+      
+      font-size: 13px
 
   &__entryItem
     padding-top: 8px
