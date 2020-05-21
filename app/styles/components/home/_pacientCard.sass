@@ -16,16 +16,15 @@
 
   &__textContainer
     @include respondTo($minWidth, 768px)
-      padding: 16px
+      padding: 24px
       width: 100%
       
       box-shadow: $boxShadowColor
-      //border-top-left-radius: 12px
-      //border-bottom-left-radius: 12px 
+      border-top-left-radius: 15px
+      border-bottom-left-radius: 15px 
 
-    
     @include respondTo($minWidth, 1024px)
-      padding: 20px 0 0 20px
+      padding-top: 30px
 
   &__title
     color: $colorPrimary
@@ -41,25 +40,26 @@
     font-size: 16px
 
     @include respondTo($minWidth, 768px)
-      max-width: 400px
+      max-width: none
+      padding-bottom: 5px
     
     @include respondTo($minWidth, 1024px)
+      padding-top: 15px
+      padding-bottom: 15px
+
       font-size: 18px
 
-  
   &__imgContainer
     margin: 0
     padding: 0
-    width: 200px
+    width: 250px
 
     @include respondTo($minWidth, 1024px)
-      width: 200px
+      width: 280px
 
   &__img
     width: 100%
     box-shadow: $boxShadowColor
-    //border-top-right-radius: 12px
-    //border-bottom-right-radius: 12px
-
-
+    border-top-right-radius: 15px
+    border-bottom-right-radius: 15px
     

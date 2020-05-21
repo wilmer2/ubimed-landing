@@ -18,13 +18,16 @@
       width: 100%
       padding: 10px 16px 14px 16px
 
+      border-top-right-radius: 15px
+      border-bottom-right-radius: 15px 
       box-shadow: $boxShadowColor
 
     @include respondTo($minWidth, 1024px)
       padding: 16px 16px 20px 16px
     
     @include respondTo($minWidth, 1215px)
-      padding-top: 14px
+      padding-top: 16px
+      padding-left: 20px
       
   &__title
     color: $colorPrimary
@@ -50,13 +53,19 @@
   &__imgContainer
     margin: 0
     padding: 0
-    width: 205px
+    width: 250px
+
+    @include respondTo($minWidth, 1024px)
+      width: 280px
       
   &__img
     height: 100%
     width: 100%
     
     box-shadow: $boxShadowColor
+    border-top-left-radius: 15px
+    border-bottom-left-radius: 15px
+    
     object-fit: cover
 
     
