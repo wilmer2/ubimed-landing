@@ -3,13 +3,10 @@
     margin-top: 30px
     background: $colorPrimary
     box-shadow: $boxShadowColor
-    border-radius: 12px
+    border-radius: 15px
 
     @include respondTo($minWidth, 600px)
       display: flex
-
-    @include respondTo($minWidth, 768px)
-      border-radius: 0
 
     @include respondTo($minWidth, 885px)
       justify-content: space-between
@@ -36,11 +33,11 @@
       font-size: 16px
     
     @include respondTo($minWidth, 600px)
-      max-width: 600px
+      max-width: 700px
+    
       
     @include respondTo($minWidth, 1024px)
       max-width: 800px
-      
       font-size: 18px
     
     @include respondTo($minWidth, 1215px)
@@ -67,13 +64,15 @@
     margin: 0
     padding: 0
 
-    width: 200px
+    width: 250px
 
   &__img
     height: 200px
     width: 100%
 
     box-shadow: $boxShadowColor
+    border-top-right-radius: 15px
+    border-bottom-right-radius: 15px
 
     object-fit: cover
 
@@ -82,9 +81,6 @@
 
     @include respondTo($minWidth, 768px)
       margin-bottom: 0
-    
-    @include respondTo($minWidth, 800px)
-      padding-top: 12px
       
   &__button, &__button:hover
     border: 1px solid white !important
