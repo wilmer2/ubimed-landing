@@ -74,9 +74,6 @@ const commonConfig = merge([
       modules: false
     },
     plugins: [
-      new HtmlPlugin({
-        template: './index.pug'
-      }),
       new FriendlyErrorsPlugin(),
       new StylelintPlugin(lintStylesOptions)
     ],
@@ -204,12 +201,34 @@ const developmentConfig = merge([
   parts.loadJS({ include: paths.app })
 ])
 
+const pages = [
+  parts.page({
+    title: 'Ubimed: ips en telemedicina',
+    entry: {
+      home: path.join(paths.app, 'scripts/index.js')
+    },
+    template: path.join(paths.app, 'index.pug'),
+
+    chunks: ['home', 'runtime', 'vendors']
+  }),
+  parts.page({
+    path: 'pacientes',
+    entry: {
+      patient: path.join(paths.app, 'scripts/patient.js')
+    },
+    template: path.join(paths.app, 'patient.pug'),
+
+    chunks: ['patient', 'runtime', 'vendors']
+  })
+];
+
 module.exports = env => {
   process.env.NODE_ENV = env
 
   return merge(
     commonConfig,
-    env === 'production' ? productionConfig : developmentConfig
+    env === 'production' ? productionConfig : developmentConfig,
+    ...pages
   )
 }
 
