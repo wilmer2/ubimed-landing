@@ -1,14 +1,160 @@
 .ubimed-benefit
-  &__title
-    color: $colorPrimary
+  &__tabContainer
+    display: flex
+    justify-content: center
+    padding-left: 3px
+    padding-right: 3px
+    
+  &__tabTitle
+    width: 100%
+    padding: 10px 5px
+    
+    background-color: #F3F3F6
+    color: #606164
+    border: 1px solid #e1e1e4
+    
+    font-size: 16px
+    text-align: center
+    
+    &--left
+      border-top-left-radius: 5px
+      border-bottom-left-radius: 5px
 
+    &--right
+      border-top-right-radius: 5px
+      border-bottom-right-radius: 5px
+
+    &--active
+      border: 2px solid $colorPrimary
+      background-color: white
+      color: #1c3643
+
+      font-weight: 700
+
+  &__title
+    margin: 0
+    padding-top: 0
+    padding-bottom: 0 
+    max-width: none
+    color: $letterColor
+
+    font-weight: 600
     font-size: 20px
 
-  &__list
+    @include respondTo($minWidth, 768px)
+      margin-bottom: 10px
+      padding: 0
+      
+      font-size: 26px
+
+  &__list, &__tableList
     margin: 0
     padding: 0
-    
-    text-decoration: none !important
   
   &__item
-    color: blue
+    display: flex
+    justify-content: space-around
+    align-items: center
+    padding: 10px 0
+    
+    color: black
+    background-color: #F3F3F6
+
+    font-size: 14px
+
+    @include respondTo($minWidth, 360px)
+      justify-content: space-between
+      padding-left: 16px
+      padding-right: 16px
+
+    &--white
+      background-color: white
+
+  &__itemInfo
+    max-width: 250px
+
+  &__itemIconContainer
+    color: #98CA3F
+
+    &--danger
+      color: #FF4842
+
+  &__bar
+    width: 100%
+    height: 1px
+    background-color: #e1e1e4
+
+  &__tableItem
+    display: flex
+    align-items: center
+    height: 60px
+    max-width: 700px
+    padding-left: 10px
+    border-top: 1px solid #dbdbe2
+    border-bottom: 1px solid #dbdbe2
+    
+    background-color: #F3F3F6
+    color: black
+
+    font-size: 14px
+
+    &--white
+      background-color: white
+
+  &__selectionIconContainer
+    display: flex
+    align-items: center
+    justify-content: center
+    height: 60px
+    border-top: 1px solid #dbdbe2
+    border-bottom: 1px solid #dbdbe2
+    
+    background-color: #F3F3F6
+    color: #98CA3F
+
+    font-size: 22px
+
+    &--last
+      border-bottom-right-radius: 15px
+      border-bottom-left-radius: 15px
+
+    &--danger
+      color: #FF4842
+
+    &--white
+      background-color: white
+
+  &__selectionTitle
+    height: 50px
+    min-width: 140px
+    line-height: 50px
+    border-top-right-radius: 15px
+    border-top-left-radius: 15px
+    
+    background-color: $colorPrimary
+    color: white
+
+    text-align: center
+    font-weight: 600
+
+    &--inverse
+      background-color: white
+      color: $colorPrimary
+
+
+  &__tableListTitle
+    padding-top: 5px
+    padding-left: 5px
+    height: 50px
+
+    color: black
+
+    font-weight: 700
+    font-size: 20px
+    line-height: 50px
+
+  &__selectionContainer
+    border: 1px solid $colorPrimary
+
+    border-top-left-radius: 15px
+    border-top-right-radius: 15px

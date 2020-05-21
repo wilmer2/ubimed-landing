@@ -1,36 +1,121 @@
 section.ubimed-benefit
-  .container
     .ubimed-benefit__container
-      h1.ubimed-benefit__title
-        | Obtén los siguiente beneficios
+      .ubimed-benefit__bar
+      .container
+        h1.ubimed-benefit__title.container.pt-4.pb-4
+          | Obtén tus Beneficios en telemedicina
 
-      .ubimet-benefit__infoContainer
+      .ubimed-benefit__infoContainer.d-md-none
         .ubimed-benefit__tabContainer
-          .ubimet-benefit__tabTitle
-            | Telemedicina interactiva
-          .ubimet-benefit__tabTitle
-            | Telemedicina no interactiva
+          .ubimed-benefit__tabTitle.ubimed-benefit__tabTitle--left.ubimed-benefit__tabTitle--active
+            |  interactiva
+          .ubimed-benefit__tabTitle.ubimed-benefit__tabTitle--right
+            |  No interactiva
+        
         .ubimed-benefit__body
           ul.ubimed-benefit__list
             li.ubimed-benefit__item
               .ubimed-benefit__itemInfo
                 | Buscar y/o elegir un profesional de la salud
-            li.ubimed-benefit__item
+              .ubimed-benefit__itemIconContainer
+                i.ubm-icon-checkmark
+            li.ubimed-benefit__item.ubimed-benefit__item--white
               .ubimed-benefit__itemInfo
                 | Comunicarte con tu médico a través de videoconsulta en tiempo real
+              .ubimed-benefit__itemIconContainer
+                i.ubm-icon-checkmark
             li.ubimed-benefit__item
               .ubimed-benefit__itemInfo
                 | Agendarte en la fecha y hora más apropiadas para ti
-            li.ubimed-benefit__item
+              .ubimed-benefit__itemIconContainer
+                i.ubm-icon-checkmark
+            li.ubimed-benefit__item.ubimed-benefit__item--white
               .ubimed-benefit__itemInfo
                 | Gestionar tu mismo la historia clínica
+              .ubimed-benefit__itemIconContainer
+                i.ubm-icon-checkmark
             li.ubimed-benefit__item
               .ubimed-benefit__itemInfo
                 | Puedes enviar y recibir fotos, imágenes, documentos y videos, serán parte integral de tu historia clínica
-            li.ubimed-benefit__item
+              .ubimed-benefit__itemIconContainer
+                i.ubm-icon-checkmark
+            li.ubimed-benefit__item.ubimed-benefit__item--white
               .ubimed-benefit__itemInfo
                 | Programar de forma automática las alertas para que no olvides tomar tus medicamentos
+              .ubimed-benefit__itemIconContainer
+                i.ubm-icon-checkmark
             li.ubimed-benefit__item
               .ubimed-benefit__itemInfo
                 | Realizar los pagos de tus consultas ó cuotas moderadoras directamente a tu profesional o
                 | institución tratante
+              .ubimed-benefit__itemIconContainer.ubimed-benefit__itemIconContainer--danger
+                i.ubm-icon-cross
+
+    .container.d-none.d-md-block
+      .ubimed-benefit__listContainer.d-flex
+        .ubimed-benefit__tableContainer
+          .ubimed-benefit__tableListContainer
+            .ubimed-benefit__tableListTitle
+              | Beneficio
+            ul.ubimed-benefit__tableList
+              li.ubimed-benefit__tableItem
+                .ubimed-benefit__tableItemText
+                  | Buscar y/o elegir un profesional de la salud
+              li.ubimed-benefit__tableItem.ubimed-benefit__tableItem--white
+                .ubimed-benefit__tableItemText
+                  | Comunicarte con tu médico a través de videoconsulta en tiempo real
+              li.ubimed-benefit__tableItem
+                .ubimed-benefit__tableItemText
+                  | Agendarte en la fecha y hora más apropiadas para ti
+              li.ubimed-benefit__tableItem.ubimed-benefit__tableItem--white
+                .ubimed-benefit__tableItemText
+                  | Gestionar tu mismo la historia clínica
+              li.ubimed-benefit__tableItem
+                .ubimed-benefit__tableItemText
+                  | Puedes enviar y recibir fotos, imágenes, documentos y videos, serán parte integral de tu historia clínica
+              li.ubimed-benefit__tableItem.ubimed-benefit__tableItem--white
+                .ubimed-benefit__tableItemText
+                  | Programar de forma automática las alertas para que no olvides tomar tus medicamentos
+              li.ubimed-benefit__tableItem
+                .ubimed-benefit__tableItemText
+                  | Realizar los pagos de tus consultas ó cuotas moderadoras directamente a tu profesional o
+                  | institución tratante
+        .ubimed-benefit__selectionContainer
+          .ubimed-benefit__selectionTitleContainer
+            .ubimed-benefit__selectionTitle
+              | Interactiva
+          .ubimed-benefit__selectionIconContainer
+            i.ubm-icon-checkmark
+          .ubimed-benefit__selectionIconContainer.ubimed-benefit__selectionIconContainer--white
+            i.ubm-icon-checkmark
+          .ubimed-benefit__selectionIconContainer
+            i.ubm-icon-checkmark
+          .ubimed-benefit__selectionIconContainer.ubimed-benefit__selectionIconContainer--white
+            i.ubm-icon-checkmark
+          .ubimed-benefit__selectionIconContainer
+            i.ubm-icon-checkmark
+          .ubimed-benefit__selectionIconContainer.ubimed-benefit__selectionIconContainer--white
+            i.ubm-icon-checkmark
+          .ubimed-benefit__selectionIconContainer
+            i.ubm-icon-checkmark
+        
+        .ubimed-benefit__selectionContainer.ml-2
+          .ubimed-benefit__selectionTitleContainer
+            .ubimed-benefit__selectionTitle.ubimed-benefit__selectionTitle--inverse
+              | No interactiva
+          .ubimed-benefit__selectionIconContainer
+            i.ubm-icon-checkmark
+          .ubimed-benefit__selectionIconContainer.ubimed-benefit__selectionIconContainer--danger.ubimed-benefit__selectionIconContainer--white
+            i.ubm-icon-cross
+          .ubimed-benefit__selectionIconContainer
+            i.ubm-icon-checkmark
+          .ubimed-benefit__selectionIconContainer.ubimed-benefit__selectionIconContainer--white
+            i.ubm-icon-checkmark
+          .ubimed-benefit__selectionIconContainer
+            i.ubm-icon-checkmark
+          .ubimed-benefit__selectionIconContainer.ubimed-benefit__selectionIconContainer--white
+            i.ubm-icon-checkmark
+          .ubimed-benefit__selectionIconContainer.ubimed-benefit__selectionIconContainer
+            i.ubm-icon-checkmark
+            
+            
