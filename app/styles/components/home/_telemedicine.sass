@@ -3,28 +3,26 @@
     margin-top: 20px
     
     background: white
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2)
+    box-shadow: $boxShadowColor
     border-radius: 12px
+
+    @include respondTo($minWidth, 720px)
+      border-radius: 15px
 
     @include respondTo($minWidth, 1024px)
       display: flex
       justify-content: space-between
-
-      box-shadow: none
     
   &__textContainer
     padding: 14px
 
     @include respondTo($minWidth, 1024px)
-      padding-left: 0
-      
+      padding: 16px
       max-width: 600px
 
     @include respondTo($minWidth, 1215px)
       max-width: 700px
-      padding-right: 0
-      margin-right: 0
-
+    
   &__textTitle
     margin: 0
     padding-bottom: 10px
@@ -38,6 +36,8 @@
       font-size: 26px
   
   &__text
+    margin-bottom: 0
+
     color: rgba(0, 0, 0, .5)
 
     font-size: 14px
@@ -48,11 +48,9 @@
     @include respondTo($minWidth, 768px)
       text-align: justify    
     
-    @include respondTo($minWidth, 900px)
+    @include respondTo($minWidth, 1024px)
       font-size: 18px
 
-    @include respondTo($minWidth, 1024px)
-      margin-bottom: 5px
 
   &__extraText
     padding-top: 10px
@@ -68,21 +66,19 @@
     @include respondTo($minWidth, 360px)
       font-size: 16px
 
-    @include respondTo($minWidth, 900px)
+    @include respondTo($minWidth, 1024px)
       font-size: 18px
 
-    @include respondTo($minWidth, 1024px)
-      display: none
-
   &__link, &__link:hover
-    //display: none
-
     color: $colorPrimary
 
     cursor: pointer
 
-    @include respondTo($minWidth, 1024px)
-      display: block
+  &__linkIconContainer
+    margin-left: 2px
+    color: $colorPrimary
+
+    font-size: 20px
     
   &__imgContainer
     margin: 0
@@ -91,18 +87,16 @@
     width: auto
 
     @include respondTo($minWidth, 1024px)
-      margin-top: 50px
-      width: 400px
+      width: 380px
 
     @include respondTo($minWidth, 1215px)
-      width: 550px    
+      width: 360px
 
   &__img
     width: 100%
-    border-radius: 8px
+    height: 200px
 
-    
+    border-top-right-radius: 15px
+    border-bottom-right-radius: 15px
 
-
-
-    
+    object-fit: cover
