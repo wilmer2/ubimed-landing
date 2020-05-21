@@ -1,4 +1,67 @@
 footer.ubimed-footer
-  .ubimed__container
-    .ubimed-footer__message
-      | © 2020. Ubimed.com.co Todos los derechos reservados
+  .ubimed__container.container
+    .ubimed-footer__container
+      figure.ubimed-footer__logoContainer
+        img.ubimed-footer__logoImg(src='./images/logoBlanco.png', alt='Ubimed Logo')  
+      div.row
+          div.col-sm.col-md-12.col-lg-4
+            .ubimed-footer__contactContainer
+              .d-none.d-lg-block.ubimed-footer__title
+                | Contáctanos
+              .ubimed-footer__linkContainer
+                i.ubm-icon-phone-24px.ubimed-footer__icon.ubimed-footer__phoneIcon
+                a.ubimed-footer__link(href='tel:+573134965171')
+                  | +57 3134965171
+              .ubimed-footer__linkContainer
+                i.ubm-icon-mail_outline-24px-1.ubimed-footer__icon.ubimed-footer__mailIcon
+                a.ubimed-footer__link(href='mailto:contacto@ubimed.com.co')
+                  | contacto@ubimed.com.co
+           
+          div.col-sm.col-md-12.col-lg-4
+            .d-none.d-lg-block.ubimed-footer__title
+                | Enlaces
+            .ubimed-footer__entriesContainer
+              .ubimed-footer__entryItem
+                .ubimed-footer__entryHeader.d-flex
+                  .ubimed-footer__entryTitle
+                      | Servicios
+                  .ubimed-footer__entryMenuArrow
+                    i.ubm-icon-expand_more-24px
+                .ubimed-footer__entryContent
+                  ul.ubimed-footer__menu.d-none
+                    a.ubimed-footer__menuItem(href='#')
+                      | Telemedicina
+                    a.ubimed-footer__menuItem(href='#')
+                      | Consultoría
+              .ubimed-footer__entryItem
+                .ubimed-footer__entryHeader.d-flex
+                  .ubimed-footer__entryTitle
+                    | Otros
+                  .ubimed-footer__entryMenuArrow
+                    i.ubm-icon-expand_more-24px
+                .ubimed-footer__entryContent
+                    ul.ubimed-footer__menu.d-none
+                      a.ubimed-footer__menuItem(href='#')
+                        | Soporte
+                      a.ubimed-footer__menuItem(href='#')
+                        | PQR
+          div.col-sm.col-md-12.col-lg-4
+            .d-none.d-lg-block.ubimed-footer__title
+              | Siguenos en
+            .ubimed-footer__socialMediaIconsContainer
+              a(href='#').ubimed-footer__socialMediaLink
+                .ubimed-footer__socialMediaCircleContainer
+                  figure.ubimed-footer__socialMediaContainer
+                    img.ubimed-footer__socialMediaImg(src='./images/facebook.png', alt='Ubimed Logo Facebook')
+              a(href='#').ubimed-footer__socialMediaLink
+                .ubimed-footer__socialMediaCircleContainer
+                  figure.ubimed-footer__socialMediaContainer
+                    img.ubimed-footer__socialMediaImg(src='./images/instagram.png', alt='Ubimed Logo Instagram')
+              a(href='https://wa.me/+573134965171').ubimed-footer__socialMediaLink
+                .ubimed-footer__socialMediaCircleContainer
+                  figure.ubimed-footer__socialMediaContainer
+                    img.ubimed-footer__socialMediaImg(src='./images/whatsapp.png', alt='Ubimed Logo WhatsApp') 
+      .ubimed-footer__secondContainer
+        .ubimed-footer__message
+          | © 2020. Ubimed.com.co Todos los derechos reservados
+        

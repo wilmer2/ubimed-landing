@@ -2,13 +2,16 @@
   &__container
     margin-top: 30px
     background: $colorPrimary
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2)
+    box-shadow: $boxShadowColor
     border-radius: 12px
 
     @include respondTo($minWidth, 600px)
       display: flex
-    
-    @include respondTo($minWidth, 800px)
+
+    @include respondTo($minWidth, 768px)
+      border-radius: 0
+
+    @include respondTo($minWidth, 885px)
       justify-content: space-between
 
   &__textContainer
@@ -19,23 +22,14 @@
     @include respondTo($minWidth, 360px)
       padding: 16px 16px 8px 16px
     
-    @include respondTo($minWidth, 1000px)
-      padding: 24px
-    
-
   &__textTitle
-
     font-size: 20px
     font-family: $familyPrimary
 
-    @include respondTo($minWidth, 360px)
-      font-size: 22px
-
-    @include respondTo($minWidth, 1000px)
+    @include respondTo($minWidth, 1024px)
       font-size: 26px
   
   &__text
-
     font-size: 14px
 
     @include respondTo($minWidth, 360px)
@@ -43,45 +37,55 @@
     
     @include respondTo($minWidth, 600px)
       max-width: 600px
-    
-    @include respondTo($minWidth, 900px)
+      
+    @include respondTo($minWidth, 1024px)
+      max-width: 800px
+      
       font-size: 18px
-    @include respondTo($minWidth, 1000px)
-      font-size: 20px
     
+    @include respondTo($minWidth, 1215px)
+      max-width: 900px
+      
+  &__extraText
+    margin-bottom: 18px
 
+    font-size: 14px
+
+    @include respondTo($minWidth, 360px)
+      font-size: 16px
+
+    @include respondTo($minWidth, 600px)
+      max-width: 600px
+
+    @include respondTo($minWidth, 768px)
+      margin-bottom: 10px
+
+    @include respondTo($minWidth, 1024px)
+      font-size: 18px
+    
   &__imgContainer
     margin: 0
     padding: 0
 
-    width: auto
+    width: 200px
 
   &__img
-    max-height: 200px
+    height: 200px
     width: 100%
-    border-bottom-left-radius: 15px
-    border-bottom-right-radius: 15px
 
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2)
+    box-shadow: $boxShadowColor
 
     object-fit: cover
 
-    @include respondTo($minWidth, 600px)
-      width: 200px
-      border-bottom-left-radius: none
-      border-top-right-radius: 15px
-
-      object-fit: contain
-    @include respondTo($minWidth, 900px)
-      width: 250px
-      max-height: none
-    
   &__linkContainer
     margin-bottom: 10px
 
     @include respondTo($minWidth, 768px)
-      margin-bottom: 5px
-
+      margin-bottom: 0
+    
+    @include respondTo($minWidth, 800px)
+      padding-top: 12px
+      
   &__button, &__button:hover
     border: 1px solid white !important
     
@@ -89,5 +93,9 @@
     color: white !important
 
     text-decoration: none
+    font-size: 14px !important
+
+    @include respondTo($minWidth, 360px)
+      font-size: 16px !important
 
     
