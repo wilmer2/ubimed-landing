@@ -239,6 +239,15 @@ const pages = [
 
     chunks: ['support', 'runtime', 'vendors']
   }),
+  parts.page({
+    path: 'beneficios/profesionales',
+    entry: {
+      professional: path.join(paths.app, 'scripts/professional.js')
+    },
+    template: path.join(paths.app, 'professional.pug'),
+
+    chunks: ['professional', 'runtime', 'vendors']
+  }),
 ];
 
 module.exports = env => {
