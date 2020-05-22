@@ -22,5 +22,14 @@ section.ubimed-form-contact
             | Dirección
           input.form-control(type='text', id='lastname' placeholder='Dirección')
         .form-group
+          label(for='messagge')
+            | Mensaje
+          input.form-control(type='text', id='message' placeholder='Mensaje')
+        .form-group
+          .form-check
+            input.form-check-input(type='checkbox', id='check')
+            label.form-check-label
+              | Aceptas politicas de privacidad         
+        .form-group
           button.button.is-primary.is-circle.is-medium(type='submit')
             | Enviar
