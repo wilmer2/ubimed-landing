@@ -1,41 +1,23 @@
 $(function () {
   const $telemedicenBtnToggle = $('#telemedice-buttonShowMore');
   const $ubimedText = $('.ubimed-telemedicine__extraText');
-  const mediaMobile = window.matchMedia('(max-width: 1023px)');
-
-  const mediaQueryMobile = () => {
-    if (mediaMobile.matches) {
-      initMobile();
-    } else {
-      initDesktop();
-    }
-  }
+  const $icon = $('#ubimed-telemedicine__iconMore');
 
   const toggleUbimedText = () => {
     if ($ubimedText.hasClass('d-block')) {
       $ubimedText.removeClass('d-block');
 
-      $telemedicenBtnToggle.text('Ver más');
+      $telemedicenBtnToggle.find('.ubimed-telemedicine__linkTitle').text('Ver más');
+      $icon.removeClass('ubm-icon-expand_less-24px');
+      $icon.addClass('ubm-icon-expand_more-24px');
     } else {
       $ubimedText.addClass('d-block');
       
-      $telemedicenBtnToggle.text('Ocultar');
+      $telemedicenBtnToggle.find('.ubimed-telemedicine__linkTitle').text('Ocultar');
+      $icon.addClass('ubm-icon-expand_less-24px');
+      $icon.removeClass('ubm-icon-expand_more-24px');
     }
   }
 
-  const initMobile = () => {
-    if ($ubimedText.hasClass('d-block')) {
-      $ubimedText.removeClass('d-block');
-    }
-
-    $telemedicenBtnToggle.text('Ver más'); 
-    $telemedicenBtnToggle.off();
-  };
-
-  const initDesktop = () => {
-    $telemedicenBtnToggle.on('click', toggleUbimedText);
-  };
-  
-  mediaMobile.addListener(mediaQueryMobile);
-  mediaQueryMobile();
+  $telemedicenBtnToggle.on('click', toggleUbimedText);
 });
