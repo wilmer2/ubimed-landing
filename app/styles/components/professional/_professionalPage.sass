@@ -1,0 +1,97 @@
+.ubimed-professional
+  &__container
+    margin-top: 30px
+
+    background: white
+    box-shadow: $boxShadowColor
+    border-radius: 15px
+    padding: 16px
+
+    @include respondTo($minWidth, 1024px)
+      box-shadow: none
+      padding: 0
+
+  &__title
+    margin-bottom: 10px
+    color: $colorPrimary
+
+    font-size: 20px
+
+    @include respondTo($minWidth, 1024px)
+      font-size: 26px
+
+  &__imgContainer
+    flex-shrink: 0
+    margin-right: 10px
+
+  &__img
+    width: 65px
+    height: 65px
+    border-radius: 50%
+
+    object-fit: cover
+
+    @include respondTo($minWidth, 360px)
+      width: 70px
+      height: 70px
+
+    @include respondTo($minWidth, 1024px)
+      width: 80px
+      height: 80px
+    
+        
+  &__message
+    padding: 0
+    margin: 0 0 20px 0
+
+    color: $letterColor
+    
+    font-size: 14px
+
+    @include respondTo($minWidth, 360px)
+      
+      font-size: 16px
+
+    @include respondTo($minWidth, 768px)
+      padding-right: 0
+    
+    @include respondTo($minWidth, 1024px)
+      font-size: 18px
+
+  &__list
+    margin: 0
+    padding: 0
+
+    @include respondTo($minWidth, 1024px)
+      display: flex
+      justify-content: space-between
+      flex-wrap: wrap
+
+  &__item
+    display: flex
+    align-items: center
+    margin-bottom: 15px
+
+    @include respondTo($minWidth, 1024px)
+      display: block
+      width: 255px
+      padding: 16px 14px 8px 14px
+
+      background: white
+      box-shadow: $boxShadowColor
+      border-radius: 15px
+      
+      text-align: center
+
+  &__itemText
+    padding: 0
+    margin: 0
+    
+    color: $letterColor
+    
+    font-size: 14px
+
+    @include respondTo($minWidth, 1024px)
+      font-weight: 500
+      text-align: center
+
