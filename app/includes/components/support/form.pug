@@ -1,0 +1,30 @@
+section.ubimed-form-support
+  .ubimed__bar
+  .container
+    .ubimed-form-support__container
+      h2.ubimed-form-support__title
+        | Soporte
+      form
+        .form-group
+          label(for='email')
+            | Correo electrónico
+          input.form-control(type='email', id='email'  placeholder='Correo electrónico')  
+        .form-group
+          label(for='name')
+            | Nombre
+          input.form-control(type='text', id='name' placeholder='Nombre')
+        .form-group
+          label(for='lastname')
+            | Apellido
+          input.form-control(type='text', id='lastname' placeholder='Apellido')
+        .form-group
+          label(for='address')
+            | Dirección
+          input.form-control(type='text', id='lastname' placeholder='Dirección')
+        .form-group
+          label(for='support')
+            | Reclamo o queja
+          textarea.form-control(name='support',  rows='3')
+        .form-group
+          button.button.is-primary.is-circle.is-medium(type='submit')
+            | Enviar
