@@ -212,14 +212,33 @@ const pages = [
     chunks: ['home', 'runtime', 'vendors']
   }),
   parts.page({
-    path: 'pacientes',
+    path: 'beneficios/pacientes',
     entry: {
       patient: path.join(paths.app, 'scripts/patient.js')
     },
     template: path.join(paths.app, 'patient.pug'),
 
     chunks: ['patient', 'runtime', 'vendors']
-  })
+  }),
+  parts.page({
+    path: 'contacto',
+    entry: {
+      contact: path.join(paths.app, 'scripts/contact.js')
+    },
+    template: path.join(paths.app, 'contact.pug'),
+
+    chunks: ['contact', 'runtime', 'vendors']
+  }),
+
+  parts.page({
+    path: 'reclamo',
+    entry: {
+      support: path.join(paths.app, 'scripts/support.js')
+    },
+    template: path.join(paths.app, 'support.pug'),
+
+    chunks: ['support', 'runtime', 'vendors']
+  }),
 ];
 
 module.exports = env => {
