@@ -7,13 +7,13 @@ section.ubimed-benefit
 
       .ubimed-benefit__infoContainer.d-md-none
         .ubimed-benefit__tabContainer
-          .ubimed-benefit__tabTitle.ubimed-benefit__tabTitle--left.ubimed-benefit__tabTitle--active
+          .ubimed-benefit__tabTitle#ubimed-benefit__interactiveBtn.ubimed-benefit__tabTitle--left.ubimed-benefit__tabTitle--active
             |  interactiva
-          .ubimed-benefit__tabTitle.ubimed-benefit__tabTitle--right
+          .ubimed-benefit__tabTitle#ubimed-benefit__noInteractiveBtn.ubimed-benefit__tabTitle--right
             |  No interactiva
         
         .ubimed-benefit__body
-          ul.ubimed-benefit__list
+          ul.ubimed-benefit__list#ubimed-benefit__interactiveList
             li.ubimed-benefit__item
               .ubimed-benefit__itemInfo
                 | Buscar y/o elegir un profesional de la salud
@@ -48,8 +48,46 @@ section.ubimed-benefit
               .ubimed-benefit__itemInfo
                 | Realizar los pagos de tus consultas ó cuotas moderadoras directamente a tu profesional o
                 | institución tratante
+              .ubimed-benefit__itemIconContainer
+                i.ubm-icon-checkmark
+
+          ul.ubimed-benefit__list#ubimed-benefit__noInteractiveList.d-none
+            li.ubimed-benefit__item
+              .ubimed-benefit__itemInfo
+                | Buscar y/o elegir un profesional de la salud
+              .ubimed-benefit__itemIconContainer
+                i.ubm-icon-checkmark
+            li.ubimed-benefit__item.ubimed-benefit__item--white
+              .ubimed-benefit__itemInfo
+                | Comunicarte con tu médico a través de videoconsulta en tiempo real
               .ubimed-benefit__itemIconContainer.ubimed-benefit__itemIconContainer--danger
                 i.ubm-icon-cross
+            li.ubimed-benefit__item
+              .ubimed-benefit__itemInfo
+                | Agendarte en la fecha y hora más apropiadas para ti
+              .ubimed-benefit__itemIconContainer
+                i.ubm-icon-checkmark
+            li.ubimed-benefit__item.ubimed-benefit__item--white
+              .ubimed-benefit__itemInfo
+                | Gestionar tu mismo la historia clínica
+              .ubimed-benefit__itemIconContainer
+                i.ubm-icon-checkmark
+            li.ubimed-benefit__item
+              .ubimed-benefit__itemInfo
+                | Puedes enviar y recibir fotos, imágenes, documentos y videos, serán parte integral de tu historia clínica
+              .ubimed-benefit__itemIconContainer
+                i.ubm-icon-checkmark
+            li.ubimed-benefit__item.ubimed-benefit__item--white
+              .ubimed-benefit__itemInfo
+                | Programar de forma automática las alertas para que no olvides tomar tus medicamentos
+              .ubimed-benefit__itemIconContainer
+                i.ubm-icon-checkmark
+            li.ubimed-benefit__item
+              .ubimed-benefit__itemInfo
+                | Realizar los pagos de tus consultas ó cuotas moderadoras directamente a tu profesional o
+                | institución tratante
+              .ubimed-benefit__itemIconContainer.ubimed-benefit__itemIconContainer--danger
+                i.ubm-icon-checkmark
 
     .container.d-none.d-md-block
       .ubimed-benefit__listContainer.d-flex
