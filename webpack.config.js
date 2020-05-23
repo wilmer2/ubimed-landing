@@ -201,7 +201,7 @@ const developmentConfig = merge([
   parts.loadJS({ include: paths.app })
 ])
 
-const pages = [
+const pages =  [
   parts.page({
     title: 'Ubimed: ips en telemedicina',
     entry: {
@@ -251,6 +251,7 @@ const pages = [
 ];
 
 module.exports = env => {
+  //console.log('env name', env);
   process.env.NODE_ENV = env
 
   return merge(

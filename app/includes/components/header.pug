@@ -19,25 +19,25 @@ header
           img.ubimed-toolbar__socialMediaImg(src='./images/whatsapp.png', alt='Ubimed Logo WhatsApp')
 
   nav.ubimed-header__navbar.navbar.navbar-expand-lg.navbar-light.bg-white
-    a.ubimed-header__logoContainer.navbar-brand(href='/')
+    a.ubimed-header__logoContainer.navbar-brand(href=baseUrl + 'index.html')
       img.ubimed-header__logo(src='./images/logo-ubimed-1.png' alt='Ubimed Logo')
     button.navbar-toggler.ubimed-header__hamburgerBtn(data-toggle='collapse' data-target='#navbarText' aria-controls='navbarText' aria-expanded='false' aria-label='Toggle navigation' type='button')
       i.navbar-toggler-icon
     #navbarText.collapse.navbar-collapse
       ul.navbar-nav.mr-auto
         li.nav-item.ubimed-header__linkContainer
-          a.nav-link.ubimed-header__link(href='/')
+          a.nav-link.ubimed-header__link(href=baseUrl + 'index.html')
             | Inicio
         li.nav-item.ubimed-header__linkContainer.dropdown
           a.nav-link.ubimed-header__link(href='#' id='serviceDropDown' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
             | Servicios
           .dropdown-menu(aria-labelledby='serviceDropDown')
-            a.dropdown-item(href='/#telemedicina')
+            a.dropdown-item(href=baseUrl + 'index.html#telemedicina')
               | Telemedicina
-            a.dropdown-item(href='/#consultoria')
+            a.dropdown-item(href=baseUrl + 'index.html#consultoria')
               | Consultoría
         li.nav-item.ubimed-header__linkContainer
-          a.nav-link.ubimed-header__link(href='/contacto')
+          a.nav-link.ubimed-header__link(href= baseUrl + 'contacto/index.html')
             | Contacto
         
         li.nav-item.ubimed-header__linkContainer.dropdown
@@ -49,7 +49,7 @@ header
           .dropdown-menu(aria-labelledby='dotDropDown')
             a.dropdown-item(href='#')
               | Soporte
-            a.dropdown-item(href='/reclamo')
+            a.dropdown-item(href=baseUrl + 'reclamo/index.html')
               | Radicar PQRS
 
         li.nav-item.d-lg-none.mt-2.mt-md-3.mb-3

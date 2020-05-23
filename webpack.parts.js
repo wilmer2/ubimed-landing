@@ -4,9 +4,13 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
 
-const publicPath = '/'
+//const publicPath = '/home/wilmer/www/ubimed-landing/build/'
+const publicPath = '/var/www/ubimed.com.co/html/build/'
+//let publicPath = '/';
 
-exports.publicPath = publicPath
+exports.publicPath = () => {
+  return publicPath;
+} 
 
 exports.devServer = ({ host, port } = {}) => ({
   devServer: {
