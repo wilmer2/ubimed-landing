@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
 
 //const publicPath = '/home/wilmer/www/ubimed-landing/build/'
-const publicPath = 'https://ubimed.com.co/'
+const publicPath = '/'
 //let publicPath = '/';
 
 exports.publicPath = () => {
