@@ -4,9 +4,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
 
-//const publicPath = '/home/wilmer/www/ubimed-landing/build/'
 const publicPath = '/'
-//let publicPath = '/';
 
 exports.publicPath = () => {
   return publicPath;
@@ -263,6 +261,7 @@ exports.page = ({
   entry,
   plugins: [
     new HtmlWebpackPlugin({
+      favicon: './images/favicon.png',
       filename: `${path && path + '/'}index.html`,
       template,
       title,

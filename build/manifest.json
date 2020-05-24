@@ -14,6 +14,7 @@
   "beneficios/pacientes/index.html": "() => {\n  return publicPath;\n}beneficios/pacientes/index.html",
   "beneficios/profesionales/index.html": "() => {\n  return publicPath;\n}beneficios/profesionales/index.html",
   "contacto/index.html": "() => {\n  return publicPath;\n}contacto/index.html",
+  "favicon.png": "() => {\n  return publicPath;\n}favicon.png",
   "fonts/contact.sass": "() => {\n  return publicPath;\n}fonts/ubm-icons.9855661e.woff",
   "images/Iconos Usuario individuales-02.png": "() => {\n  return publicPath;\n}images/Iconos Usuario individuales-02.2c323db6.png",
   "images/Iconos Usuario individuales-07.png": "() => {\n  return publicPath;\n}images/Iconos Usuario individuales-07.0a077272.png",

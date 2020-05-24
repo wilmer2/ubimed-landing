@@ -15,29 +15,29 @@ header
           img.ubimed-toolbar__socialMediaImg(src='./images/facebook.png', alt='Ubimed Logo Facebook')
         a(href='#').ubimed-toolbar__socialMediaLink
           img.ubimed-toolbar__socialMediaImg(src='./images/instagram.png', alt='Ubimed Logo Instagram')
-        a(href='https://wa.me/+573134965171').ubimed-toolbar__socialMediaLink
+        a(href='https://wa.link/bui6f9', target='_blank').ubimed-toolbar__socialMediaLink
           img.ubimed-toolbar__socialMediaImg(src='./images/whatsapp.png', alt='Ubimed Logo WhatsApp')
 
   nav.ubimed-header__navbar.navbar.navbar-expand-lg.navbar-light.bg-white
-    a.ubimed-header__logoContainer.navbar-brand(href=baseUrl + 'index.html')
+    a.ubimed-header__logoContainer.navbar-brand(href='/')
       img.ubimed-header__logo(src='./images/logo-ubimed-1.png' alt='Ubimed Logo')
     button.navbar-toggler.ubimed-header__hamburgerBtn(data-toggle='collapse' data-target='#navbarText' aria-controls='navbarText' aria-expanded='false' aria-label='Toggle navigation' type='button')
       i.navbar-toggler-icon
     #navbarText.collapse.navbar-collapse
       ul.navbar-nav.mr-auto
         li.nav-item.ubimed-header__linkContainer
-          a.nav-link.ubimed-header__link(href=baseUrl + 'index.html')
+          a.nav-link.ubimed-header__link(href='/')
             | Inicio
         li.nav-item.ubimed-header__linkContainer.dropdown
           a.nav-link.ubimed-header__link(href='#' id='serviceDropDown' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
             | Servicios
           .dropdown-menu(aria-labelledby='serviceDropDown')
-            a.dropdown-item(href=baseUrl + 'index.html#telemedicina')
+            a.dropdown-item(href='/#telemedicina')
               | Telemedicina
-            a.dropdown-item(href=baseUrl + 'index.html#consultoria')
+            a.dropdown-item(href='/#consultoria')
               | Consultoría
         li.nav-item.ubimed-header__linkContainer
-          a.nav-link.ubimed-header__link(href= baseUrl + 'contacto/index.html')
+          a.nav-link.ubimed-header__link(href='contacto')
             | Contacto
         
         li.nav-item.ubimed-header__linkContainer.dropdown
@@ -49,11 +49,11 @@ header
           .dropdown-menu(aria-labelledby='dotDropDown')
             a.dropdown-item(href='#')
               | Soporte
-            a.dropdown-item(href=baseUrl + 'reclamo/index.html')
+            a.dropdown-item(href='reclamo')
               | Radicar PQRS
 
         li.nav-item.d-lg-none.mt-2.mt-md-3.mb-3
-          a.button.is-primary.is-circle.mt-1(href='#')
+          a.button.is-primary.is-circle.mt-1(href='https://app.ubimed.com.co/inicio')
             | Ingresar
       a.button.is-outlined.is-circle.d-none.d-lg-block.mr-3(href='#')
         | Ingresar
