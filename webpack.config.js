@@ -94,26 +94,27 @@ const commonConfig = merge([
 const productionConfig = merge([
   {
     mode: 'production',
-    optimization: {
+    /*optimization: {
       splitChunks: {
-        chunks: 'all'
+        chunks: 'all',
+        name: 'commons'
       },
       runtimeChunk: 'single'
-    },
+    },*/
     output: {
-      chunkFilename: `${paths.js}/[name].[chunkhash:8].js`,
+      //chunkFilename: `${paths.js}/[name].[chunkhash:8].js`,
       filename: `${paths.js}/[name].[chunkhash:8].js`
     },
     performance: {
       hints: 'warning', // 'error' or false are valid too
-      maxEntrypointSize: 100000, // in bytes
-      maxAssetSize: 450000 // in bytes
+      //maxEntrypointSize: 100000, // in bytes
+      //maxAssetSize: 450000 // in bytes
     },
     plugins: [
       new StatsWriterPlugin({ fields: null, filename: '../stats.json' }),
       new webpack.HashedModuleIdsPlugin(),
       new ManifestPlugin(),
-      new CleanPlugin()
+      new CleanPlugin(),
     ]
   },
   parts.minifyJS({
@@ -205,11 +206,11 @@ const pages =  [
   parts.page({
     title: 'Ubimed: ips en telemedicina',
     entry: {
-      home: path.join(paths.app, 'scripts/index.js')
+      main: path.join(paths.app, 'scripts/index.js'),
     },
     template: path.join(paths.app, 'index.pug'),
 
-    chunks: ['home', 'runtime', 'vendors']
+    chunks: ['main', 'runtime', 'commons']
   }),
   parts.page({
     path: 'beneficios/pacientes',
@@ -218,7 +219,7 @@ const pages =  [
     },
     template: path.join(paths.app, 'patient.pug'),
 
-    chunks: ['patient', 'runtime', 'vendors']
+    chunks: ['patient', 'runtime', 'commons']
   }),
   parts.page({
     path: 'contacto',
@@ -227,7 +228,7 @@ const pages =  [
     },
     template: path.join(paths.app, 'contact.pug'),
 
-    chunks: ['contact', 'runtime', 'vendors']
+    chunks: ['contact', 'runtime', 'commons']
   }),
 
   parts.page({
@@ -237,7 +238,7 @@ const pages =  [
     },
     template: path.join(paths.app, 'support.pug'),
 
-    chunks: ['support', 'runtime', 'vendors']
+    chunks: ['support', 'runtime', 'commons']
   }),
   parts.page({
     path: 'beneficios/profesionales',
@@ -246,12 +247,11 @@ const pages =  [
     },
     template: path.join(paths.app, 'professional.pug'),
 
-    chunks: ['professional', 'runtime', 'vendors']
+    chunks: ['professional', 'runtime', 'commons']
   }),
 ];
 
 module.exports = env => {
-  //console.log('env name', env);
   process.env.NODE_ENV = env
 
   return merge(

@@ -232,7 +232,7 @@ exports.loadJS = ({ include, exclude, options } = {}) => ({
         test: /\.js$/,
 
         include,
-        exclude,
+        //exclude,
 
         loader: 'babel-loader',
         options
@@ -261,6 +261,7 @@ exports.page = ({
   entry,
   plugins: [
     new HtmlWebpackPlugin({
+      inject: true,
       favicon: './images/favicon.png',
       filename: `${path && path + '/'}index.html`,
       template,

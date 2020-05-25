@@ -1,23 +1,23 @@
-$(function () {
-  const $telemedicenBtnToggle = $('#telemedice-buttonShowMore');
-  const $ubimedText = $('.ubimed-telemedicine__extraText');
-  const $icon = $('#ubimed-telemedicine__iconMore');
+import $ from 'jquery'
 
-  const toggleUbimedText = () => {
-    if ($ubimedText.hasClass('d-block')) {
-      $ubimedText.removeClass('d-block');
+const $telemedicenBtnToggle = $('#telemedice-buttonShowMore')
+const $ubimedText = $('.ubimed-telemedicine__extraText')
+const $icon = $('#ubimed-telemedicine__iconMore')
 
-      $telemedicenBtnToggle.find('.ubimed-telemedicine__linkTitle').text('Ver más');
-      $icon.removeClass('ubm-icon-expand_less-24px');
-      $icon.addClass('ubm-icon-expand_more-24px');
-    } else {
-      $ubimedText.addClass('d-block');
-      
-      $telemedicenBtnToggle.find('.ubimed-telemedicine__linkTitle').text('Ocultar');
-      $icon.addClass('ubm-icon-expand_less-24px');
-      $icon.removeClass('ubm-icon-expand_more-24px');
-    }
+const toggleUbimedText = () => {
+  if ($ubimedText.hasClass('d-block')) {
+    $ubimedText.removeClass('d-block')
+
+    $telemedicenBtnToggle.find('.ubimed-telemedicine__linkTitle').text('Ver más')
+    $icon.removeClass('ubm-icon-expand_less-24px')
+    $icon.addClass('ubm-icon-expand_more-24px')
+  } else {
+    $ubimedText.addClass('d-block')
+
+    $telemedicenBtnToggle.find('.ubimed-telemedicine__linkTitle').text('Ocultar')
+    $icon.addClass('ubm-icon-expand_less-24px')
+    $icon.removeClass('ubm-icon-expand_more-24px')
   }
+}
 
-  $telemedicenBtnToggle.on('click', toggleUbimedText);
-});
+$telemedicenBtnToggle.on('click', toggleUbimedText)
