@@ -94,15 +94,15 @@ const commonConfig = merge([
 const productionConfig = merge([
   {
     mode: 'production',
-    /*optimization: {
+    optimization: {
       splitChunks: {
         chunks: 'all',
         name: 'commons'
       },
       runtimeChunk: 'single'
-    },*/
+    },
     output: {
-      //chunkFilename: `${paths.js}/[name].[chunkhash:8].js`,
+      chunkFilename: `${paths.js}/[name].[chunkhash:8].js`,
       filename: `${paths.js}/[name].[chunkhash:8].js`
     },
     performance: {
@@ -167,10 +167,7 @@ const productionConfig = merge([
       chunkFilename: `${paths.css}/[id].[contenthash:8].css`
     }
   }),
-  parts.purifyCSS({
-    paths: glob.sync(`${paths.app}/**/*.+(pug|js)`, { nodir: true }),
-    styleExtensions: ['.css', '.scss']
-  }),
+
   parts.minifyCSS({
     options: {
       discardComments: {
